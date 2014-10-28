@@ -5,8 +5,9 @@
 #include "at_wifiCmd.h"
 #include "at_ipCmd.h"
 #include "at_baseCmd.h"
+#include "at_ntp.h"
 
-#define at_cmdNum   20
+#define at_cmdNum   22
 
 at_funcationType at_fun[at_cmdNum]={
   {NULL, 0, NULL, NULL, NULL, at_exeCmdNull},
@@ -28,7 +29,9 @@ at_funcationType at_fun[at_cmdNum]={
   {"+CIPSERVER", 10, NULL, NULL,at_setupCmdCipserver, NULL},
   {"+CIPMODE", 8, NULL, at_queryCmdCipmode, at_setupCmdCipmode, NULL},
   {"+CIPSTO", 7, NULL, at_queryCmdCipsto, at_setupCmdCipsto, NULL},
-  {"+CIUPDATE", 9, NULL, NULL, NULL, at_exeCmdUpdate}
+  {"+CIUPDATE", 9, NULL, NULL, NULL, at_exeCmdUpdate},
+  {"+NTP", 4, NULL, NULL, NULL, at_exeCmdNtp},
+  {"+NTPCANCEL", 10, NULL, NULL, NULL, at_exeCmdNtpCancel}
 };
 
 #endif
