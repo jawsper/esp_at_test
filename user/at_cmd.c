@@ -105,7 +105,7 @@ at_cmdProcess(uint8_t *pAtRcvData)
       }
       else
       {
-        uart0_sendStr("no this fun\r\n");
+        uart0_sendStr("Command has no exeCmd\r\n");
       }
     }
     else if(*pAtRcvData == '?' && (pAtRcvData[1] == '\r'))
@@ -116,7 +116,7 @@ at_cmdProcess(uint8_t *pAtRcvData)
       }
       else
       {
-        uart0_sendStr("no this fun\r\n");
+        uart0_sendStr("Command has no queryCmd\r\n");
       }
     }
     else if((*pAtRcvData == '=') && (pAtRcvData[1] == '?') && (pAtRcvData[2] == '\r'))
@@ -127,7 +127,7 @@ at_cmdProcess(uint8_t *pAtRcvData)
       }
       else
       {
-        uart0_sendStr("no this fun\r\n");
+        uart0_sendStr("Command has no testCmd\r\n");
       }
     }
     else if((*pAtRcvData >= '0') && (*pAtRcvData <= '9') || (*pAtRcvData == '='))
@@ -138,7 +138,7 @@ at_cmdProcess(uint8_t *pAtRcvData)
       }
       else
       {
-        uart0_sendStr("no this fun\r\n");
+        uart0_sendStr("Command has no setupCmd\r\n");
       }
     }
     else
